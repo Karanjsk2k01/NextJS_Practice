@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 function developer() {
   
   let router = useRouter();
   
-  let parameterValue = router.query.developer;
+  let parameterValue = router.query.Id;
   
   let details = [
     { id: 1, name: 'Karan', role: 'Senior Developer' },
@@ -18,7 +19,7 @@ function developer() {
 
   return (
 
-    <div>
+    <div style={{padding:'20px'}}>
       {selectedDeveloper ? (
         <div  style={{padding:'20px'}}>
           <h1>{selectedDeveloper.name}</h1>
@@ -31,6 +32,11 @@ function developer() {
         </div>
 
       }
+      <button style={{ margin: '20px', padding: '5px', width: '5rem', backgroundColor: 'white', color: 'black' }}>
+        <Link href='/aboutus'>
+          Back
+        </Link>
+      </button>
     </div>
     
 

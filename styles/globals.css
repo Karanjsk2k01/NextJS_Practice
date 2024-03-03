@@ -9,6 +9,15 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  text-decoration:wavy;
+}
+
+a:hover{
+  font-weight: bold;
+}
+
+ul{
+  list-style: none;
 }
 
 * {
